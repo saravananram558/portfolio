@@ -79,10 +79,20 @@ body {
     object-fit: cover;
 }
 
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons i{
+    width: 50px;
+    height: 50px;
+}
+
 .L-back-image img {
     position: relative;
     left:20px;
-    height: 1000px;
+    height: 860px;
     width: 70%;
 }
 
@@ -187,7 +197,7 @@ p {
 }
 
 .card-arrange {
-    width: 330px;
+    width: 250px;
     height: 380px;
     border: 20px ridge coral;
     border-radius: 5px;
@@ -196,7 +206,7 @@ p {
 }
 
 .card-arrange img{
-    width: 250px;
+    width: 210px;
     height: 200px;
     border-bottom: 1px solid black;
     padding: 10px;
@@ -241,7 +251,7 @@ width: 916px;
 .cont-bag{
     background-color: black;
     height: 960px;
-    position: absolute;
+    position: relative;
     right: 0px;
     width: 916px;
 }
