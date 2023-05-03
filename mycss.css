@@ -79,15 +79,22 @@ body {
     object-fit: cover;
 }
 
-.leftside img {
+.L-back-image img {
     position: relative;
+    left:20px;
     height: 1000px;
     width: 70%;
 }
 
+.R-back-image img {
+    position: relative;
+    left: 200px;
+    height: 1000px;
+}
+
 .rightside {
     background-color: black;
-    height: 960px;
+    height: 1000px;
     width: 100%;
 }
 
@@ -141,7 +148,7 @@ p {
 /* about me section */
 .about-left{
     background-color: black;
-    height: 960px;
+    height: 1000px;
     color: white;
     padding-top: 50px;
     display: flex;
@@ -158,7 +165,7 @@ p {
 /* skills section */
 .bag{
     background-color: black;
-    height: 930px;
+    height: 960px;
     position: absolute;
     right: 0px;
     width: 916px;
@@ -205,4 +212,52 @@ p {
 .card-arrange a:hover{
     color: white;
     background-color: coral;
+}
+
+/* projects-section */
+.pro-bag{
+background-color: black;
+height: 960px;
+position: absolute;
+left: 0px;
+width: 916px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    margin-bottom: 100px;
+}
+
+.p-inner {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+}
+/* contact section */
+.cont-bag{
+    background-color: black;
+    height: 960px;
+    position: absolute;
+    right: 0px;
+    width: 916px;
+}
+
+.form-area{
+    position: relative;
+    left: 100px;
+    top: 100px;
+    border: 20px ridge coral;
+    background-color: #fff;
+    width:800px;
+    height: 600px;
+}
+
+.inside-form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
 }
