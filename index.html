@@ -71,11 +71,11 @@
                      <p class="card-title">This is my portfolio, created by me.</p>
                      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
                      <div class="icons"> 
-                        <i class="fa-brands fa-square-twitter fa-3x"></i>
-                        <i class="fa-brands fa-linkedin fa-3x"></i>
-                        <i class="fa-brands fa-square-github fa-3x"></i>
-                        <i class="fa-brands fa-square-instagram fa-3x"></i>
-                        <i class="fa-solid fa-square-envelope fa-3x"></i>
+                        <a href="https://twitter.com/home"><i class="fa-brands fa-square-twitter fa-3x"></i></a>
+                        <a href="https://www.linkedin.com/in/saravanan-r-767328238/"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+                        <a href="https://github.com/saravananram558"><i class="fa-brands fa-square-github fa-3x"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram fa-3x"></i></a>
+                        <a href=""><i class="fa-solid fa-square-envelope fa-3x"></i></a>
                      </div>
                     
                   </div>
@@ -89,7 +89,7 @@
          <div class="row mainrow">
             <!-- home section left-side -->
             <div class="col-6 L-back-image">
-               <img src="./images/happy.avif" alt="">
+               <img src="./images/Good one.jpg" alt="">
             </div>
 
             <!-- home section right-side -->
@@ -105,8 +105,25 @@
          <div class="col-lg-6 about-left">
             <h2 class="head-bar">About Me</h2>
             <p>Welcome to our website! We are a team of dedicated professionals who are passionate about providing top-quality services to our clients. With years of experience in the industry, we have the knowledge and skills to help you achieve your goals.</p>
-            <h3 class="head-bar">Our Mission</h3>
-            <p>Our mission is to provide exceptional service to our clients while maintaining a commitment to integrity, professionalism, and excellence. We strive to exceed our clients' expectations by delivering results that are tailored to their unique needs.</p>
+            <h3 class="head-bar skills">Education</h3>
+               <div class="edu-inner">
+                  <div class="card-arrange">
+                     <img src="./images/ABMS.jpg" alt="">
+                     <p class="card-text">The Adithya Birla Matriculation School,</p><p>Ariyalur</p>
+                     <a href="#" class="btn btn-primary">Know More</a>
+                  </div>
+                  <div class="card-arrange">
+                     <img src="./images/SRMS.png" alt="">
+                     <p class="card-text">Sri Ramakrishna Matriculation School,</p><p>Perambalur</p>
+                     <a href="#" class="btn btn-primary">Know More</a>
+                  </div>
+                  <div class="card-arrange">
+                     <img src="./images/Anna_University_Logo.svg.png" alt="">
+                     <p class="card-text">University college of Enginering,</p>               
+                        <p>Villupuram</p>
+                     <a href="http://www.aucev.edu.in/" class="btn btn-primary">Know More</a>
+                  </div>
+               </div>
          </div>
          <div class="col-lg-6 about-right R-back-image">
             
@@ -164,9 +181,14 @@
    </div>
 
    <!-- project section -->
-   <div class="projects container-fluid">
-      <div class="pro-bag">
-         <div class="p-inner" data-aos="fade-right" data-aos-duration="2500">
+  
+   <div class="skills container-fluid">
+      <div class="col-6 L-back-image">
+         <img src="./images/happy.avif" alt="">
+      </div>
+      <div class="bag">
+        
+         <div class="s-inner" data-aos="fade-right" data-aos-duration="2500">
             <div class="card-arrange">
                <img src="./images/html.svg" alt="Html">
                <p class="card-text">Hypertext Markup Language</p>
@@ -183,7 +205,7 @@
                <a href="#" class="btn btn-primary">Learn More</a>
             </div>
          </div>
-         <div class="p-inner" data-aos="fade-right" data-aos-duration="3000">
+         <div class="s-inner" data-aos="fade-right" data-aos-duration="3000">
             <div class="card-arrange">
                <img src="./images/javascript-1.svg" alt="javascript">
                <p class="card-text">JavaScript</p>
@@ -199,39 +221,57 @@
                <p class="card-text">My Structured Query Language.</p>
                <a href="#" class="btn btn-primary">Learn More</a>
             </div>
-         </div>   
+         </div>
+
+
       </div>
+      
    </div>
    
 
    <!-- contact section -->
-<div>
-   <div class="cont-bag">
-        
+<div class="container-fluid">
+   <div class="col-6 cont-bag">
+      <div>
+      <div class="form-area">
+            <p>GET IN TOUCH</p>
+            <form>
+               <div class="form-group">
+                  <label for="exampleInputPassword1">Name</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="enter username">
+                </div>
+               <div class="form-group">
+                 <label for="exampleInputEmail1">email</label>
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+               </div>
+               <div class="form-group">
+                  <label for="exampleFormControlTextarea1">message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+               </div>
+               
+               <button type="submit" class="btn btn-primary">Submit</button>
+             </form>
+            <div class="form-icons">
+               <i class="fa-brands fa-square-twitter fa-4x"></i>
+               <i class="fa-brands fa-linkedin fa-4x"></i>
+               <i class="fa-brands fa-square-github fa-4x"></i>
+               <i class="fa-brands fa-square-instagram fa-4x"></i>
+               <i class="fa-solid fa-square-envelope fa-4x"></i>
+            </div>
+      </div>
+      </div> 
    </div>
-   <div class="form-area">
-         <form class="inside-form" action="">
-            <label for="name">Name:
-            <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
-            </label>
-          
-            <label for="email">Email:
-            <input type="email" id="email" name="email" placeholder="Enter Your e-mail" required>
-            </label>
-          
-            <label for="mobile">Mobile Number:
-            <input type="tel" id="mobile" name="mobile" placeholder="Enter Your mobile number"  required>
-            </label>
-          
-            <label for="message">Message:
-            <textarea id="message" name="message" placeholder="Enter Your Message"  required></textarea>
-            </label>
-          
-            <input type="submit" value="Submit">
-            
-         </form>
-   </div>
+    <div class="row container-fluid">
+       <div class="col-lg-6 L-back-image">       
+          <img src="./images/happy.avif" alt="">
+       </div>
+       <div class="col-lg-6 thanks">
+         <p>வருகைக்கு நன்றி</p>
+      </div>
+    </div>   
 </div>
+
+
    <script>
       AOS.init();
     </script>
