@@ -1,18 +1,99 @@
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     
-    /* styles for small screens */
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    /* styles for medium screens */
+    styles for small screens
 }
 
 @media (min-width: 992px) {
-    /* styles for large screens */
-}
+    styles for large screens
+} */
 
-body {
+@media (min-width: 375px) and (max-width: 767px) {
+    .nav-links{
+        position: absolute;
+        z-index: 1;
+        top: 4rem;
+        background-color: black;
+        width: 94%;
+        border-radius: 10px;
+    }
+
+    .logo img {
+        width: 200px !important;
+        position: relative;
+        height: 62px !important;
+        margin-top: 0px;
+    } 
+    .nav-section {
+        border: 5px solid black;
+        width: 473px !important;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+    
+    }
+    .navbar-position{
+        height: 54px;
+        padding-top: 0px !important;
+    }
+    .navbar-nav{
+        background-color: white;
+    }
+    .navbar-nav li:hover{
+        background-color: #53C8EA;
+    }
+    .mainrow{
+        flex-direction: column;
+        width: 400px !important;
+    }
+    .L-back-image{
+        width: 100% !important;
+    }
+    .L-back-image img{
     position: relative;
+    left: 42px;
+    height: 600px !important;
+    width: 100%;
+    }
+    .rightside{
+        width: 100% !important;
+    }
+    .welcome{
+        font-size: 80px !important;
+    }
+    .card{
+        /* max-width: 540px; */
+        width: 300px !important;
+        order: 1;
+        position: absolute !important;
+        left: 2%;
+        top: 9%;
+    }
+    .img-fix{
+        width: 300px;
+        height: 304px;
+    
+    }
+    .img-fix img{
+        width: 200px;
+        height: 250px;
+        object-fit: contain;
+    }
+    .about-left{
+        width: 470px;
+    }
+    .edu-inner{
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
+    .R-back-image img{
+        display: none;
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------
+body {
+    position: absolute;
     top: 75px;
 }
 
@@ -278,19 +359,17 @@ p {
 
 /* projects-section */
 
-.bag{
+.pro-bag{
     background-color: black;
     height: 960px;
-    position: absolute;
-    right: 0px;
+    position: relative;
     width: 916px;
 }
 
-.skills {
+.projects {
     display: flex;
-    flex-direction: column;
     z-index: 2;
-    margin-bottom: 100px;
+    width: 100%;
 }
 
 .s-inner {
@@ -330,29 +409,51 @@ p {
     font-weight: bold;
 }
 
+.pro-img img {
+    position: absolute;
+    z-index: 1;
+    padding: 30px;
+    margin: 60px;
+    right: 0px;
+    height: 860px;
+}
+
 
 /* contact section */
 .cont-bag{
     background-color: black;
     height: 960px;
-    position: relative;
+    position: absolute;
     right: 0px;
     width: 916px;
 }
 
 .form-area{
-    position: relative;
-    left: 52px;
-    top: 100px;
+    position: absolute;
+    z-index: 1;
+    right:0px;
     border: 20px ridge #53C8EA;
     background-color: #fff;
-    width:800px;
-    padding: 10px;
+    width: 800px;
+    padding: 70px;
+    margin: 70px;
+    margin-right: 50px;
 }
 
 .form-area button{
-    display: flex;
-    justify-content: center;
+    padding: 20px;
+    margin: 50px;
+    position: relative;
+    left: 215px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
+
+.form-area button:hover{
+    background-color: #53C8EA;
+    font-weight: bolder;
 }
 
 .form-group{
@@ -371,9 +472,21 @@ p {
     color: #53C8EA;
 }
 
+.contact-img{
+    padding: 64px;
+}
+
+.contact-img img{
+    padding-left: 85px;
+}
+
+
+/* thanks section */
 .thanks{
-    display: flex;
-    align-items: center;
+    position: absolute;
+    display: flex; 
+    /* align-items: center; */
+    /* justify-content: center; */ 
 }
 .thanks p{
     font-size: 150px;
