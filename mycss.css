@@ -48,6 +48,7 @@
     }
     .L-back-image{
         width: 100% !important;
+        margin: 50px;
     }
     .L-back-image img{
     position: relative;
@@ -145,13 +146,15 @@ body {
 .mainrow {
     position: relative;
     z-index: 0;
+    padding-top: 75px;
+    height: 975px;
 }
 
 .card {
     width: 700px;
     position: absolute !important;
     z-index: 1;
-    top: 220px;
+    top: 310px;
     left: 647px;
     z-index: 1;
     border: var(--container-corvid-border-width,var(--brw,1px)) solid var(--container-corvid-border-color,rgba(var(--brd,var(--color_15)),var(--alpha-brd,1)));
@@ -181,6 +184,10 @@ body {
     padding-left: 2px;
 }
 
+.L-back-image{
+    height: 900px;
+}
+
 .L-back-image img {
     position: relative;
     left:20px;
@@ -191,12 +198,13 @@ body {
 .R-back-image img {
     position: relative;
     left: 200px;
-    height: 1000px;
+    height: 960px;
+    padding-top: 62px;
 }
 
 .rightside {
     background-color: black;
-    height: 1000px;
+    height: 900px;
     width: 100%;
 }
 
@@ -250,12 +258,12 @@ p {
 /* about me section */
 .about-left{
     background-color: black;
-    height: 1000px;
-    color: white;
-    padding-top: 50px;
+    height: 986px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    color: white;
+    padding-top: 80px;
 }
 
 .head-bar{
@@ -295,7 +303,7 @@ p {
     display: flex;
     flex-direction: column;
     z-index: 2;
-    margin-bottom: 100px;
+    padding-top: 60px;
 }
 
 .s-inner {
@@ -361,7 +369,7 @@ p {
 
 .pro-bag{
     background-color: black;
-    height: 960px;
+    height: 100%;
     position: relative;
     width: 916px;
 }
@@ -370,6 +378,8 @@ p {
     display: flex;
     z-index: 2;
     width: 100%;
+    height:981px;
+    padding-top: 60px;
 }
 
 .s-inner {
@@ -410,12 +420,11 @@ p {
 }
 
 .pro-img img {
-    position: absolute;
+    position: relative;
     z-index: 1;
-    padding: 30px;
-    margin: 60px;
-    right: 0px;
-    height: 860px;
+    padding: 115px;
+    padding-left: 136px;
+    height: 100%;
 }
 
 
@@ -425,7 +434,7 @@ p {
     height: 960px;
     position: absolute;
     right: 0px;
-    width: 916px;
+    width: 980px;
 }
 
 .form-area{
@@ -436,7 +445,7 @@ p {
     background-color: #fff;
     width: 800px;
     padding: 70px;
-    margin: 70px;
+    margin: 83px;
     margin-right: 50px;
 }
 
@@ -473,11 +482,12 @@ p {
 }
 
 .contact-img{
-    padding: 64px;
+    padding: 49px;
 }
 
 .contact-img img{
     padding-left: 85px;
+    padding-top: 28px;
 }
 
 
