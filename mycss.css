@@ -29,7 +29,8 @@
     .welcome{
         font-size: 4px;
     }
-    /* .nav-links{
+    
+     .nav-links{
         position: absolute;
         z-index: 1;
         top: 4rem;
@@ -52,12 +53,13 @@
         background-color: #53C8EA;
     }
     .mainrow{
-        flex-direction: column;
+        
         width: 400px !important;
     }
     .L-back-image{
         width: 100% !important;
         margin: 50px;
+        height: 550px;
     }
     .L-back-image img{
     position: relative;
@@ -67,6 +69,7 @@
     }
     .rightside{
         width: 100% !important;
+        height: 550px;
     }
     .welcome{
         font-size: 80px !important;
@@ -99,7 +102,7 @@
     }
     .R-back-image img{
         display: none;
-    } */
+    } 
 }
 --------------------------------------------------------------------------------------------------------------------------
 body {
@@ -135,6 +138,7 @@ body {
     font-size: 25px;
     color: white;
     padding: 0 20px;
+    text-transform:uppercase;
 }
 
 .logo img {
@@ -464,6 +468,10 @@ p {
 
 
 /* contact section */
+.contact{
+    padding-top: 30px;
+}
+
 .cont-bag{
     background-color: black;
     height: 960px;
@@ -539,14 +547,12 @@ p {
 
 /* thanks section */
 .thanks{
-    position: absolute;
-    display: flex; 
-    /* align-items: center; */
-    /* justify-content: center; */ 
+
 }
 .thanks p{
     font-size: 150px;
     color: #53C8EA;
     text-shadow: 9px 2px #ff0;
     text-align: center;
+    margin-top: 100px;
 }
