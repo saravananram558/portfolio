@@ -1,114 +1,6 @@
-/* @media (max-width: 767px) {
-    
-    styles for small screens
-}
-
-@media (min-width: 992px) {
-    styles for large screens
-} */
-
-@media (min-width: 375px) and (max-width: 667px) {
-    .nav-section {
-        border: 5px solid black;
-        width: 375px !important;
-        position: fixed;
-        z-index: 2;
-        left: 0;
-        top: 0;
-    
-    }
-
-    .navbar-position{
-        height: 54px;
-        padding-top: 0px !important;
-    }
-
-    .logo img{
-        height: 61px;
-    }
-    .welcome{
-        font-size: 4px;
-    }
-    
-     .nav-links{
-        position: absolute;
-        z-index: 1;
-        top: 4rem;
-        background-color: black;
-        width: 94%;
-        border-radius: 10px;
-    }
-
-    .logo img {
-        width: 200px !important;
-        position: relative;
-        height: 62px !important;
-        margin-top: 0px;
-    } 
-    
-    .navbar-nav{
-        background-color: white;
-    }
-    .navbar-nav li:hover{
-        background-color: #53C8EA;
-    }
-    .mainrow{
-        
-        width: 400px !important;
-    }
-    .L-back-image{
-        width: 100% !important;
-        margin: 50px;
-        height: 550px;
-    }
-    .L-back-image img{
-    position: relative;
-    left: 42px;
-    height: 600px !important;
-    width: 100%;
-    }
-    .rightside{
-        width: 100% !important;
-        height: 550px;
-    }
-    .welcome{
-        font-size: 80px !important;
-    }
-    .card{
-        
-        width: 300px !important;
-        order: 1;
-        position: absolute !important;
-        left: 2%;
-        top: 9%;
-    }
-    .img-fix{
-        width: 300px;
-        height: 304px;
-    
-    }
-    .img-fix img{
-        width: 200px;
-        height: 250px;
-        object-fit: contain;
-    }
-    .about-left{
-        width: 470px;
-    }
-    .edu-inner{
-        flex-direction: column;
-        align-items: center;
-        margin: 15px;
-    }
-    .R-back-image img{
-        display: none;
-    } 
-}
---------------------------------------------------------------------------------------------------------------------------
 body {
-    position: absolute;
+    /* position: absolute; */
     top: 75px;
-    overflow: hidden;
     width: fit-content;
 }
 
@@ -128,8 +20,8 @@ body {
     width: 100%;
     position: fixed;
     z-index: 2;
-    left: 0;
-    top: 0;
+    /* left: 0;
+    top: 0; */
 
 }
 
@@ -157,21 +49,12 @@ body {
     grid-auto-flow: column;
 }
 
-/* home section */
-.mainrow {
-    position: relative;
-    z-index: 0;
-    padding-top: 75px;
-    height: 975px;
-}
-
 .card {
     width: 550px;
-    position: absolute !important;
+    position: absolute;
     z-index: 1;
     top: 310px;
     left: 647px;
-    z-index: 1;
     border: var(--container-corvid-border-width,var(--brw,1px)) solid var(--container-corvid-border-color,rgba(var(--brd,var(--color_15)),var(--alpha-brd,1)));
     border-radius: var(--rd,5px);
     box-shadow: var(--shd, 0 1px 4px rgba(0, 0, 0, .6));
@@ -187,11 +70,13 @@ body {
     justify-content: space-evenly;
     padding: 0px;
 }
+
 .icons i:hover{
     color: #53C8EA;
     background-color: #fff;
     border: none;
 }
+
 .icons i{
     /* width: 43px;
     height: 50px; */
@@ -282,9 +167,16 @@ body {
     background-color: #53C8EA;
 }
 
-.myName h5,
 p {
     font-weight: bolder;
+}
+
+/* home section */
+.mainrow {
+    position: relative;
+    z-index: 0;
+    padding-top: 75px;
+    height: 975px;
 }
 
 /* about me section */
@@ -320,6 +212,7 @@ p {
     background-color: #fff;
 
 }
+
 .edu-inner{
     display: flex;
     justify-content: space-evenly;
@@ -466,7 +359,6 @@ p {
     height: 100%;
 }
 
-
 /* contact section */
 .contact{
     padding-top: 30px;
@@ -487,16 +379,20 @@ p {
     border: 20px ridge #53C8EA;
     background-color: #fff;
     width: 800px;
+    height: 860px;
     padding: 70px;
-    margin: 76px;
+    margin-top: 60px;
+    margin-bottom: 26px;
     margin-right: 50px;
 }
 
 .form-area button{
-    padding: 20px;
+    padding: 0;
+    height: 60px;
     margin: 50px;
     position: relative;
-    left: 215px;
+    left: 188px;
+    width: 140px;
     border-radius: 10px;
     color: white;
     background-color: black;
@@ -545,10 +441,53 @@ p {
     color: #53C8EA;
 }
 
-/* thanks section */
-.thanks{
-
+/* Table section */
+.table-section{
+    margin-top: 80px;
+    /* display: flex;
+    justify-content: space-around; */
 }
+
+.Table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: fit-content;
+    border: 15px groove cyan;
+    text-align: center;
+    font-size: larger;
+}
+
+.table-section h2 {
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform:uppercase;
+    background-color: #4bdafa;
+}
+
+.Table th,
+.Table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #f05151;
+}
+
+.Table th {
+    background-color: #4bdafa;
+}
+
+.Table tbody tr:hover {
+    background-color: #7ffcf2;
+}
+
+.Table tbody td:last-child {
+    text-align: center;
+}
+/* thanks section */
+/* .thanks{
+
+} */
 .thanks p{
     font-size: 150px;
     color: #53C8EA;
