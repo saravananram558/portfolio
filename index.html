@@ -14,6 +14,11 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
       crossorigin="anonymous" referrerpolicy="no-referrer">
+      <style>
+      .hidden {
+         display: none !important; /* Use !important if needed to override other styles */
+      }
+      </style>
 </head>
 
 <body>
@@ -116,10 +121,10 @@
                      <span>Know More</span>
                   </div>
                </div>
-               <div class="additional-info" style="display: none;">
+               <div class="additional-info additional-info-style" style="display: none;">
                   <!-- Additional information to be displayed when "Know More" is clicked -->
-                  <p>Percentage: Your Percentage</p>
-                  <a href="#" class="btn back-btn">Back</a>
+                  <div class="percentage-circle">92%</div>
+                  <a class="back-btn">Back</a>
                </div>
             </div>
             <div class="card-arrange">
@@ -131,10 +136,10 @@
                      <span>Know More</span>
                   </div>
                </div>
-               <div class="additional-info" style="display: none;">
+               <div class="additional-info additional-info-style" style="display: none;">
                   <!-- Additional information to be displayed when "Know More" is clicked -->
-                  <p>Percentage: Your Percentage</p>
-                  <a href="#" class="btn back-btn">Back</a>
+                  <div class="percentage-circle">91%</div>
+                  <a class="back-btn">Back</a>
                </div>
             </div>
             <div class="card-arrange">
@@ -146,10 +151,10 @@
                      <span>Know More</span>
                   </div>
                </div>
-               <div class="additional-info" style="display: none;">
+               <div class="additional-info additional-info-style" style="display: none;">
                   <!-- Additional information to be displayed when "Know More" is clicked -->
-                  <p>Percentage: Your Percentage</p>
-                  <a href="#" class="btn back-btn">Back</a>
+                  <div class="percentage-circle">72%</div>
+                  <a class="back-btn">Back</a>
                </div>
             </div>
          </div>
@@ -352,25 +357,41 @@
       }
       window.addEventListener('load', playAudio);
 
-      $(document).ready(function () {
-            // Handle the click event on the "Know More" button
-            $(".edu-inner .know-more").click(function () {
-                // Hide the content div
-                $(this).parent().siblings(".content").hide();
+      document.addEventListener("DOMContentLoaded", function () {
+    var knowMoreButtons = document.getElementsByClassName("know-more");
+    var backButtons = document.getElementsByClassName("back-btn");
 
-                // Show the additional information div
-                $(this).siblings(".additional-info").show();
-            });
+    // Handle the click event on the "Know More" buttons
+    Array.from(knowMoreButtons).forEach(function (button) {
+      button.addEventListener("click", function () {
+        // Hide the content div
+        button.closest(".content").style.display = "none";
 
-            // Handle the click event on the "Back" button
-            $(".edu-inner .back-btn").click(function () {
-                // Hide the additional information div
-                $(this).parent().hide();
+        // Show the additional information div
+        var additionalInfo = button.closest(".card-arrange").getElementsByClassName("additional-info")[0];
+        additionalInfo.style.display = "flex";
 
-                // Show the content div
-                $(this).parents(".card-arrange").find(".content").show();
-            });
-        });
+        // Hide the percentage within the additional information div
+        additionalInfo.querySelector(".percentage").style.display = "none";
+      });
+    });
+
+    // Handle the click event on the "Back" buttons
+    Array.from(backButtons).forEach(function (backButton) {
+      backButton.addEventListener("click", function () {
+        // Hide the additional information div
+        var additionalInfo = backButton.closest(".additional-info");
+        additionalInfo.style.display = "none";
+
+        // Show the content div
+        var contentDiv = backButton.closest(".card-arrange").getElementsByClassName("content")[0];
+        contentDiv.style.display = "block";
+
+        // Show the percentage within the content div
+        contentDiv.querySelector(".percentage").style.display = "block";
+      });
+    });
+  });
    </script>
 
    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

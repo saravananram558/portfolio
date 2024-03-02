@@ -297,6 +297,73 @@ p {
     margin-bottom: 20px;
 }
 
+ /* Styles for the circle percentage */
+ .percentage-circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Blue color, you can change it */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Animation on hover for Know More button */
+.know-more:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation for percentage circle on hover */
+.additional-info:hover .percentage-circle {
+    background-color: #e74c3c; /* Change color on hover */
+    transform: scale(1.1);
+}
+
+/* Animation on hover for Know More button */
+.know-more:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation for the percentage */
+.percentage.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.additional-info-style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.additional-info .back-btn{
+    cursor: pointer;
+    height: 32px;
+    margin: 0;
+    line-height: 16px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #010101;
+    background-color: white;
+    color: #010101;
+    font-weight: 500;
+    text-decoration: none;
+    &:hover{
+        background-color: #4bdafa;
+    }
+}
+
 .content{
     height: 100%;
     display: flex;
