@@ -299,8 +299,8 @@ p {
 
  /* Styles for the circle percentage */
  .percentage-circle {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: #3498db; /* Blue color, you can change it */
     color: #fff;
     border-radius: 50%;
@@ -320,9 +320,16 @@ p {
 }
 
 /* Animation for percentage circle on hover */
-.additional-info:hover .percentage-circle {
-    background-color: #e74c3c; /* Change color on hover */
+.additional-info .percentage-circle {
+    background: radial-gradient(circle, #4bdafa, white, #010101, #ff0);
+    animation: rotateColor 2s linear infinite; /* Rotate colors with a 2-second animation */
     transform: scale(1.1);
+}
+
+/* Keyframes for rotating animation */
+@keyframes rotateColor {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Animation on hover for Know More button */
