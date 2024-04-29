@@ -347,16 +347,24 @@
       <p class="col-lg-12">வருகைக்கு நன்றி..!</p>
    </div>
 
-
+   <script src="path/to/aos.js"></script>
    <script>
       AOS.init();
       var audio = new Audio('./bgm.mp3');
       audio.loop = true;
+      // Function to play audio when it's allowed
       function playAudio() {
-         audio.play();
+        audio.play().catch(function(error) {
+          // If autoplay is not allowed, user interaction is required to play audio
+          console.error("Failed to play audio:", error);
+        });
       }
-      window.addEventListener('load', playAudio);
-   </script>
+      // Check if the document has fully loaded before attempting to play audio
+      document.addEventListener('DOMContentLoaded', function() {
+        // Wait a bit before trying to play audio to ensure other resources have loaded
+        setTimeout(playAudio, 1000); // Adjust as needed
+      });
+    </script>
 
    <script src="./about.js"></script>
 
