@@ -52,6 +52,25 @@ body {
     grid-auto-flow: column;
 }
 
+.home-section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.map-section{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.map-section iframe{
+    width: 50%;
+}
+
+.card-section{
+    position: absolute;
+}
+
 .card {
     width: 550px;
     position: absolute;
@@ -623,4 +642,8 @@ p {
     text-shadow: 9px 2px #ff0;
     text-align: center;
     margin-top: 100px;
+}
+
+@media (min-width:320px) and (max-width:480px){
+    
 }
