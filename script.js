@@ -1,108 +1,22 @@
-document.getElementById('updateButton').style.display = "none";
-
-//get operation
-function getData(){
-    fetch('http://localhost:4000/getData')
-    .then(response => response.json())
-    .then(json =>{
-        html =""
-        json.forEach(e => {
-            html += `<tr>
-            <td>${e.name}</td>
-            <td>${e.age}</td>
-            <td>${e.email}</td>
-            <td>${e.message}</td>
-            <td><input type="button" class='btn' value="Edit" onclick="editData(${e.id})">
-            <input type="button" class='btn' value="Delete" onclick="deleteData(${e.id})"></td>
-           </tr>`
-        });
-        document.getElementById('tbody').innerHTML=html;
-    })
-}
-getData();
-// ------------------------------------------------------------------
-//edit function
-function editData(id) {
-    fetch('http://localhost:4000/getUser/' +id)
-    .then(response => response.json())
-    .then(json => {
-        json.forEach(e => {
-            console.log(e, "editing")
-            document.getElementById("name").value = e.name,
-            document.getElementById("age").value = e.age,
-            document.getElementById("email").value = e.email,
-            document.getElementById("message").value = e.message,
-            document.getElementById('hiddenId').value = e.id,
-            document.getElementById("updateButton").style.display = "block";
-            document.getElementById("addButton").style.display = "none";
-        })
-    })
-    getData();
-}
-//--------------------------------------------------------------------------------------
-//delete function
-function deleteData(id){
-    fetch('http://localhost:4000/deleteData/' +id, {
-        method: 'PUT',
-        body: JSON.stringify({
-            name:document.getElementById("name").value,
-            age:document.getElementById("age").value,
-            email:document.getElementById("email").value,
-            message:document.getElementById("message").value,
-        }),
-    })
-    .then((response)=>response.json())
-    .then((json)=>{
-        console.log(json)
-        getData();
-    })
-}
-// ----------------------------------------------------------------------------------------
-//Post operation
-function newUser(){
-    fetch('http://localhost:4000/postData', {
-        method: 'POST',
-        body: JSON.stringify({
-            name:document.getElementById("name").value,
-            age:document.getElementById("age").value,
-            email:document.getElementById("email").value,
-            message:document.getElementById("message").value
-        }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    })
-    .then((response)=>response.json())
-    .then((json)=>{
-        console.log(json)
-        getData();
-    })
-}
-// ----------------------------------------------------------------------------------------------------
-//update operation
-function updateUser() {
-    console.log("updated");
-    let id = document.getElementById("hiddenId").value
-    fetch(`http://localhost:4000/putData/` + id, {
-        method: 'PUT',
-        body: JSON.stringify({
-            name: document.getElementById("name").value,
-            age:document.getElementById("age").value,
-            email: document.getElementById("email").value,
-            message: document.getElementById("message").value,
-        }),
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-    })
-        .then((response) => response.json())
-        .then((json) => {
-            console.log(json)
-            getData();
-            document.getElementById('updateButton').style.display = "none";
-            document.getElementById('addButton').style.display = "block";
-            
-        });
-        
+// Function to get the current time in a readable format
+function getCurrentTime() {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    return now.toLocaleDateString('en-US', options);
 }
 
+// Set the last updated time
+document.getElementById('last-updated').textContent = `Last updated: ${getCurrentTime()}`;
+
+// Show the confirmation dialog
+document.getElementById('download-cv').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor click behavior
+    
+    // // Show a confirmation dialog
+    // const userConfirmed = confirm("Are you sure you want to download the CV?");
+    
+    // if (userConfirmed) {
+        // Redirect to the PDF file or start the download
+        window.location.href = 'showMessage.html'; // Replace with your actual PDF file path
+    // }
+});

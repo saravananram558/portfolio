@@ -27,39 +27,40 @@
    <!-- nav-bar section  -->
    <div class="nav-section" data-aos="fade-down" data-aos-duration="1000">
       <nav class="navbar navbar-expand-lg navbar-light nav-bg navbar-position">
-         <div class="container-fluid ">
-            <div class="logo">
-               <a class="navbar-brand" href="#"><img src="./images/saravanan.gif" alt=""></a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse nav-links" id="navbarNav">
-               <ul class="navbar-nav ms-auto hover-c">
-                  <li class="nav-item">
-                     <a class="nav-link" aria-current="page" href="#home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#about">About me</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#skills">Skills</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#project">Projects</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#contact">Contact</a>
-                  </li>
-               </ul>
-            </div>
+         <div class="logo">
+            <a class="navbar-brand" href="#"><img src="./images/saravanan.gif" alt=""></a>
+         </div>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse nav-links" id="navbarNav">
+            <ul class="navbar-nav ms-auto hover-c">
+               <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#home">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#about">About me</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#project">Projects</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#contact">Get in touch</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="tel:+6383635286"><img src="./images/cell-phone.svg" alt=""> 6383635286</a>
+               </li>
+            </ul>
          </div>
       </nav>
    </div>
 
    <!-- home section  -->
-   <div class="container-fluid home-section" id="home">
+   <div class="home-section" id="home">
       <div class="row mainrow">
          <div class="col-12 col-lg-6 col-md-12 col-sm-12 L-back-image">
             <img src="./images/Good one.jpg" alt="">
@@ -89,14 +90,17 @@
                      <h1 class="card-title"> Hello</h1>
                      <h3>Here's who I am & what I do</h3>
                      <p class="card-title">This is my portfolio, created by me.</p>
-                     <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                     <p class="card-text"><small id="last-updated" class="text-body-secondary"></small></p>
+                     <!-- <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p> -->
                      <div class="icons"> 
                         <a href="https://twitter.com/SaravananUltim1"><i class="fa-brands fa-square-twitter fa-3x"></i></a>
                         <a href="https://www.linkedin.com/in/saravanan-r-767328238/"><i class="fa-brands fa-linkedin fa-3x"></i></a>
                         <a href="https://github.com/saravananram558"><i class="fa-brands fa-square-github fa-3x"></i></a>
                         <a href="https://www.instagram.com/laughter_lad_/"><i class="fa-brands fa-square-instagram fa-3x"></i></a>
                      </div>
-                    <a href=""><button>Download CV</button></a>
+                     <div id="download-cv">
+                        <button>Download CV</button>
+                     </div>
                   </div>
                </div>
             </div>
@@ -105,7 +109,7 @@
    </div>
 
    <!-- about section -->
-   <div class="row container-fluid" id="about">
+   <div class="row" id="about">
       <div class="col-lg-6 about-left">
          <h2 class="head-bar">About Me</h2>
          <p class="para">My name is Saravanan
@@ -168,7 +172,7 @@
    </div>
 
    <!-- skills -->
-   <div class="skills container-fluid" id="skills">
+   <div class="skills" id="skills">
       <div class="col-5 L-back-image" data-aos="zoom-in" data-aos-duration="2000">
          <img src="./images/skills.jpg" alt="">
       </div>
@@ -212,7 +216,7 @@
    </div>
 
    <!-- project section -->
-   <div class="projects container-fluid" id="project">
+   <div class="projects" id="project">
       <div class="col-lg-6 pro-bag">
 
          <div class="s-inner" data-aos="zoom-in-up" data-aos-duration="2500">
@@ -258,7 +262,7 @@
    </div>
 
    <!-- contact section -->
-   <div class="container-fluid contact" id="contact">
+   <div class="contact" id="contact">
       <div class="col-6 cont-bag">
          <div class="form-area" id="form" data-aos="zoom-in" data-aos-duration="3000">
             <p>GET IN TOUCH</p>
@@ -266,26 +270,24 @@
                <div class="form-group">
                   <input type="hidden" id="hiddenId">
                   <label for="name">Name:</label>
-                  <input type="text" id="name" class="form-control" name="name" placeholder="Enter username" required>
-               </div>
-               <div class="form-group">
-                  <label for="age">Age:</label>
-                  <input type="text" class="form-control" id="age" name="age" placeholder="Enter your age" required>
+                  <input type="text" id="name" class="form-control" name="name" placeholder="Enter your name" required>
                </div>
                <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+               </div>
+               <div class="form-group">
+                  <label for="mobile">Mobile:</label>
+                  <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
                </div>
                <div class="form-group">
                   <label for="message">Message:</label>
-                  <textarea id="message" class="form-control" rows="7" name="message" rows="4" cols="30"
+                  <textarea id="message" class="form-control" rows="7" name="message" rows="4" cols="30" placeholder="Enter message"
                      required></textarea>
                </div>
                <div>
-                  <button type="button" id="addButton" onclick="newUser()">Add</button>
-                  <button type="button" id="updateButton" onclick="updateUser()">Update</button>
+                  <button type="submit">Submit</button>
                </div>
-               <!-- <button type="submit" >Submit</button> -->
             </form>
             <div class="form-icons">
                <a href="https://twitter.com/SaravananUltim1">
@@ -317,36 +319,9 @@
          </div>
       </div>
    </div>
-   <!-- table section
-<div class="table-section">
-   <h2>Table</h2>
-   <div class="Table">
-         <table>
-             <thead>
-               <tr>
-                 <th>Name</th>
-                 <th>Age</th>
-                 <th>Email</th>
-                 <th>Message</th>
-                 <th>Action</th>
-               </tr>
-             </thead>
-             <tbody id="tbody">
-               <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-               </tr>
-            </tbody>
-         </table>
-   </div>
-</div> -->
-
 
    <!-- thanks section -->
-   <div class="thanks row container-fluid">
+   <div class="thanks row">
       <p class="col-lg-12">வருகைக்கு நன்றி..!</p>
    </div>
 

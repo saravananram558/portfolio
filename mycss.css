@@ -2,7 +2,24 @@ body {
     /* position: absolute; */
     top: 75px;
     width: fit-content;
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width as needed */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    /* background: linear-gradient(to bottom, #010101, #fff); */
+    background: white;
+    border-radius: 50px;
+    margin: 5px;
+    /* border: 2px solid #53C8EA;  */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
 
 /* navbar section */
 .navbar-position {
@@ -26,6 +43,9 @@ body {
 
 .nav-link {
     border-radius: 10px;
+    display: flex !important;
+    gap: 10px;
+    font-size: 14px !important;
 }
 
 .hover-c li {
@@ -207,13 +227,31 @@ p {
 #home{
     width: auto !important;
 }
+
+.message-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    left: 100%;
+}
+
+.back-page{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 10px;
+    margin: 10px;
+}
 /* home section */
 .mainrow {
     position: relative;
     z-index: 0;
     padding: 0;
     margin: 0;
-    padding-top: 71px;
+    padding-top: 70px;
     height: 975px;
 }
 
@@ -505,10 +543,6 @@ p {
 }
 
 /* contact section */
-.contact{
-    padding-top: 30px;
-}
-
 .cont-bag{
     background-color: black;
     height: 960px;
